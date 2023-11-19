@@ -1,0 +1,54 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LED Simulation</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header>
+    <div class="logo-container">
+      <img src="iiith.png" alt="Logo 1" id="logo">
+      <h1>Digital Twin Simulation</h1>
+      <img src="scrc_logo.png" alt="Logo 2" id="logo">
+    </div>
+  </header>
+
+  <section class="input-section">
+    <h2>Enter Values</h2>
+    <div>
+      <label for="red">Red: </label>
+      <input type="number" id="red" min="0" max="255" value="0">
+
+      <label for="green">Green: </label>
+      <input type="number" id="green" min="0" max="255" value="0">
+
+      <label for="blue">Blue: </label>
+      <input type="number" id="blue" min="0" max="255" value="0">
+
+      <button id="simulateButton">Simulate</button>
+    </div>
+  </section>
+
+  <section class="led-section">
+    <div class="led-box">
+      <h2>Actual LED Value</h2>
+      <div id="org-container"><!-- The LED SVG will be inserted here dynamically --></div>
+    </div>
+    <div class="arrow-container">&#8594;</div>
+    <div class="led-box">
+      <h2>Value Received in ESP</h2>
+      <div id="esp-container"><!-- The LED SVG will be inserted here dynamically --></div>
+    </div>
+    <div class="arrow-container">&#8594;</div>
+    <div class="led-box">
+      <h2>Detected LED Value</h2>
+      <div id="led-container"><!-- The LED SVG will be inserted here dynamically --></div>
+    </div>
+  </section>
+
+  <script src="js/simulation.js"></script>
+</body>
+</html>

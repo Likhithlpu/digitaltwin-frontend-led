@@ -1,4 +1,4 @@
-/* styles.css */
+/* Add your existing styles here if needed */
 body {
     font-family: 'Arial', sans-serif;
     margin: 0;
@@ -6,7 +6,7 @@ body {
     background-color: #f0f0f0; /* Light gray background */
   }
   
-  header {
+  .header {
     background-color: #333; /* Dark background for header */
     color: white;
     padding: 10px;
@@ -27,38 +27,11 @@ body {
     margin: 0;
   }
   
-  .led-section {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-  }
-  
-  .led-box {
-    width: 30%; /* Adjust the width of LED boxes as needed */
-    margin: 20px;
-    padding: 20px;
-    background-color: #fff; /* White background for LED boxes */
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  }
-  
-  h2,p {
-    text-align: center;
-    color: #333; /* Dark text color */
-  }
-  
-  svg {
-    width: 100%;
-    height: auto;
-    max-width: 100%;
-  }
-  
-  /* Additional styles for LED boxes */
   .input-section {
     width: 60%;
     margin: 20px auto;
     padding: 20px;
-    background-color: #fff; 
+    background-color: #fff;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     text-align: center;
@@ -84,14 +57,48 @@ body {
     background-color: #45a049; /* Darker green on hover */
   }
   
+  .led-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  
+  .led-box {
+    width: 20%;
+    margin: 20px;
+    padding: 20px;
+    background-color: #fff; /* White background for LED boxes */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+  }
+  
+  .arrow-container {
+    font-size: 24px; /* Adjust arrow size */
+    margin: 10px 0; /* Add some space around the arrow */
+  }
+  
+  h2,
+  p {
+    text-align: center;
+    color: #333; /* Dark text color */
+  }
+  
+  svg {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+  }
+  
   /* Responsive adjustments */
   @media (max-width: 768px) {
     .led-box {
-        width: 20%; /* Full width on smaller screens */
+      width: 20%; /* Full width on smaller screens */
     }
   
     .input-section {
-        width: 20%; /* Adjust input section width on smaller screens */
+      width: 20%; /* Adjust input section width on smaller screens */
     }
   }
   
