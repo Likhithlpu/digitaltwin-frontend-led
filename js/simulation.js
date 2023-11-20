@@ -20,6 +20,8 @@ document.addEventListener('DOMContentLoaded', function () {
   
     OrgdisplayLED(red,green,blue);
     ESP(red,green,blue);
+    CS(red,green,blue);
+    SVR(red,green,blue);
     // Perform the calculation (add +20 to each RGB value)
     const simulatedRed = Math.min(255, red + 10);
     const simulatedGreen = Math.min(255, green - 100);
@@ -109,6 +111,61 @@ document.addEventListener('DOMContentLoaded', function () {
     rgbValues.classList.add('rgb-values');
     rgbValues.innerHTML = `<p>RED: ${red}, GREEN: ${green}, BLUE: ${blue}</p>`;
     ledContainer.appendChild(rgbValues);
+
+    
 }
 
+function CS(red, green, blue) {
+  const ledContainer = document.getElementById('cs-container');
+  ledContainer.innerHTML = ''; // Clear previous content
+
+  // Create an image element
+  const imgElement = document.createElement('img');
+
+  // Set the image source (replace with the actual path)
+  imgElement.setAttribute('src', 'images/cs.png');
+
+  // Set the image size (replace with actual dimensions)
+  imgElement.setAttribute('width', '300');
+  imgElement.setAttribute('height', '300');
+
+  imgElement.style.transform = 'rotate(90deg)';
+  // Append the image element to the container
+  ledContainer.appendChild(imgElement);
+
+  // Add the RGB values
+  const rgbValues = document.createElement('div');
+  rgbValues.classList.add('rgb-values');
+  rgbValues.innerHTML = `<p>RED: ${red}, GREEN: ${green}, BLUE: ${blue}</p>`;
+  ledContainer.appendChild(rgbValues);
+
+  
+}
+
+function SVR(red, green, blue) {
+  const ledContainer = document.getElementById('server-container');
+  ledContainer.innerHTML = ''; // Clear previous content
+
+  // Create an image element
+  const imgElement = document.createElement('img');
+
+  // Set the image source (replace with the actual path)
+  imgElement.setAttribute('src', 'images/server.png');
+
+  // Set the image size (replace with actual dimensions)
+  imgElement.setAttribute('width', '200');
+  imgElement.setAttribute('height', '300');
+
+  // imgElement.style.transform = 'rotate(90deg)';
+  // Append the image element to the container
+  ledContainer.appendChild(imgElement);
+
+  // Add the RGB values
+  const rgbValues = document.createElement('div');
+  rgbValues.classList.add('rgb-values');
+  rgbValues.innerHTML = `<p>RED: ${red}, GREEN: ${green}, BLUE: ${blue}</p>`;
+  ledContainer.appendChild(rgbValues);
+
+  
+}
   
