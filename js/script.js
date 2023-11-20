@@ -45,6 +45,8 @@ function fetchLedColor() {
   // Fetch data and update LED colors every 5 seconds (adjust as needed)
   setInterval(fetchData, 5000);
 
+  
+
   document.addEventListener('DOMContentLoaded', function () {
     // Add an event listener to the button
     document.getElementById('sendValuesButton').addEventListener('click', function () {
