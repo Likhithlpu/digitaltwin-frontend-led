@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', function () {
   
     // Send the data to your server
     const serverUrl = 'http://localhost:3486/post-data'; // Replace with your actual server URL
-    const serverData = { red: simulatedRed, green: simulatedGreen, blue: simulatedBlue };
+    const serverData = { red: red, green: green, blue: blue };
   
     try {
       const response = await fetch(serverUrl, {
