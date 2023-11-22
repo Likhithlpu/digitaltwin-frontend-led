@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', function () {
   
     OrgdisplayLED(red,green,blue);
     ESP(red,green,blue);
-    CS(red,green,blue);
+    
     SVR(red,green,blue);
     // Perform the calculation (add +20 to each RGB value)
     const simulatedRed = Math.min(255, red + 10);
@@ -29,6 +29,7 @@ document.addEventListener('DOMContentLoaded', function () {
   
     // Display the simulated LED value
     displayLED(simulatedRed, simulatedGreen, simulatedBlue);
+    CS(simulatedRed,simulatedGreen,simulatedBlue);
   
     // Send the data to your server
     const serverUrl = 'http://localhost:3486/post-data'; // Replace with your actual server URL
@@ -136,7 +137,7 @@ function CS(red, green, blue) {
   // Add the RGB values
   const rgbValues = document.createElement('div');
   rgbValues.classList.add('rgb-values');
-  rgbValues.innerHTML = `<p>RED: ${simulatedRed}, GREEN: ${simulatedGreen}, BLUE: ${simulatedBlues}</p>`;
+  rgbValues.innerHTML = `<p>RED: ${red}, GREEN: ${green}, BLUE: ${blue}</p>`;
   ledContainer.appendChild(rgbValues);
 
   
