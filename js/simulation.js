@@ -136,7 +136,7 @@ function CS(red, green, blue) {
   // Add the RGB values
   const rgbValues = document.createElement('div');
   rgbValues.classList.add('rgb-values');
-  rgbValues.innerHTML = `<p>RED: ${red}, GREEN: ${green}, BLUE: ${blue}</p>`;
+  rgbValues.innerHTML = `<p>RED: ${simulatedRed}, GREEN: ${simulatedGreen}, BLUE: ${simulatedBlues}</p>`;
   ledContainer.appendChild(rgbValues);
 
   
