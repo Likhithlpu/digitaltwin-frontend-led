@@ -50,39 +50,47 @@ function fetchLedColor() {
   document.addEventListener('DOMContentLoaded', function () {
     // Add an event listener to the button
     document.getElementById('sendValuesButton').addEventListener('click', function () {
-      // Get values from input boxes
-      const red = document.getElementById('red').value;
-      const blue = document.getElementById('blue').value;
-      const green = document.getElementById('green').value;
-  
-      // Check if values are not empty
-      if (red && blue && green) {
-        // Prepare data to send to the backend API
-        const data = {
-          red: red,
-          blue: blue,
-          green: green
-        };
-  
-        // Make an API request using fetch
-        fetch('http://localhost:3486/post-data', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json'
-          },
-          body: JSON.stringify(data)
-        })
-        .then(response => response.json())
-        .then(data => {
-          // Handle the response from the API if needed
-          console.log('API Response:', data);
-        })
-        .catch(error => {
-          console.error('Error:', error);
-        });
-      } else {
-        alert('Please enter values in all three boxes.');
-      }
+        // Get values from input boxes
+        const red = document.getElementById('red').value;
+        const blue = document.getElementById('blue').value;
+        const green = document.getElementById('green').value;
+
+        // Check if values are not empty
+        if (red && blue && green) {
+            // Prepare data to send to the backend API
+            const data = {
+                red: red,
+                blue: blue,
+                green: green
+            };
+
+            // Make an API request using fetch
+            fetch('http://192.168.0.109:3486/post-data', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(data)
+            })
+                .then(response => response.json())
+                .then(data => {
+                    // Handle the response from the API if needed
+                    console.log('API Response:', data);
+
+                    // Clear input values after a successful API request
+                    document.getElementById('red').value = '';
+                    document.getElementById('blue').value = '';
+                    document.getElementById('green').value = '';
+
+                    alert('Values sent successfully!');
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                });
+        } else {
+            alert('Please enter values in all three boxes.');
+        }
     });
-  });
+});
+
   
