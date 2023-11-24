@@ -46,12 +46,12 @@ requests_data = varied_reds + varied_greens + varied_blues + random_colors
 # Send one request every 15 seconds
 for data in requests_data:
     try:
-        # response = requests.post(url, json=data)
-        # response.raise_for_status()
+        response = requests.post(url, json=data)
+        response.raise_for_status()
         print(f"{datetime.now()} - Request sent successfully: {data}")
     except requests.exceptions.RequestException as e:
         print(f"{datetime.now()} - Error sending request: {e}")
 
-    # time.sleep(15)
+    time.sleep(15)
 
 print("Script completed.")
