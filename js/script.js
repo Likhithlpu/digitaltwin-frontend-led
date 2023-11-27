@@ -27,7 +27,7 @@ function fetchLedColor() {
   
   async function fetchData() {
     try {
-      const response = await fetch('http://192.168.0.109:3486/latest-data-node2');
+      const response = await fetch('http://192.168.0.109:3486/latest-data');
       const data = await response.json();
   
       // Extract RGB values
