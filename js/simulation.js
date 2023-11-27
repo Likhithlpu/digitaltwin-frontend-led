@@ -23,9 +23,9 @@ document.addEventListener('DOMContentLoaded', function () {
     
     SVR(red,green,blue);
     // Perform the calculation (add +20 to each RGB value)
-    const simulatedRed = Math.min(255, red + 10);
-    const simulatedGreen = Math.min(255, green +38);
-    const simulatedBlue = Math.min(255, blue + 24);
+    const simulatedRed = Math.min(255, red - 37);
+    const simulatedGreen = Math.min(255, green - 20);
+    const simulatedBlue = Math.min(255, blue - 9);
   
     // Display the simulated LED value
     displayLED(simulatedRed, simulatedGreen, simulatedBlue);
