@@ -27,7 +27,7 @@ function fetchLedColor() {
   
   async function fetchData() {
     try {
-      const response = await fetch('http://192.168.0.109:3486/latest-data');
+      const response = await fetch('http://10.3.1.117:3488/latest-data');
       const data = await response.json();
   
       // Extract RGB values
@@ -65,7 +65,7 @@ function fetchLedColor() {
             };
 
             // Make an API request using fetch
-            fetch('http://192.168.0.109:3486/post-data', {
+            fetch('http://10.3.1.117:3488/post-data', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'

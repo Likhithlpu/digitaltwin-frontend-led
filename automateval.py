@@ -5,7 +5,7 @@ import time
 from datetime import datetime
 
 # API endpoint
-url = "http://192.168.0.109:3486/post-data"
+url = "http://10.3.1.117:3488/post-data"
 
 # Function to generate variations of a single color while keeping the others at 0
 def generate_single_color_variation(base_color, num_variations, color_to_vary):

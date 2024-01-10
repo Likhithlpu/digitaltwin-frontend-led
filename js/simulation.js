@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', function () {
     CS(simulatedRed,simulatedGreen,simulatedBlue);
   
     // Send the data to your server
-    const serverUrl = 'http://localhost:3486/post-data'; // Replace with your actual server URL
+    const serverUrl = 'http://localhost:3488/post-data'; // Replace with your actual server URL
     const serverData = { red: red, green: green, blue: blue };
   
     try {
